@@ -1,4 +1,6 @@
 import React from "react";
+import html2canvas from "html2canvas";
+import "file-saver";
 
 import LogoP from "../../assets/img/logo-p.jpg";
 import LogoG from "../../assets/img/logo-g.jpg";
@@ -10,9 +12,20 @@ import LogoPhone from "../../assets/img/icon-phone.jpg";
 import * as S from "./styles";
 
 const Home = () => {
+  const print = () => {
+    html2canvas(document.querySelector("#capture")).then((canvas) => {
+      //Imprimi o resultado na DOM
+      /*document.body.appendChild(canvas);*/
+
+      canvas.toBlob(function (blob) {
+        // Gerando arquivo para download
+        window.saveAs(blob, "yourwebsite_screenshot.png");
+      });
+    });
+  };
   return (
     <>
-      <S.Container>
+      <S.Container id="capture">
         <table>
           <tr>
             <td>
@@ -50,12 +63,24 @@ const Home = () => {
 
               <p className="contato">
                 <img alt="logo com símbulo de telefone" src={LogoPhone} /> +55
-                <span>17 3353 0833</span> | 11 3434 6484
+                <span> (17) 3353-0833</span> | <span> (11) 3434-6484</span>
               </p>
             </S.Contato>
           </tr>
         </table>
       </S.Container>
+
+      <div className="container-fluid">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          onClick={() => {
+            print();
+          }}
+        >
+          Salvar
+        </button>
+      </div>
     </>
   );
 };

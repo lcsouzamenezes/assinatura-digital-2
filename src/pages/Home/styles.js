@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  width: 420px;
+  padding: 0 0.5rem;
+  border: 2px dashed #404759;
+`;
 
 export const Pessoa = styled.tr`
   .nome {
@@ -26,12 +30,13 @@ export const Contato = styled.td`
   .email {
     font-family: "Montserrat", sans-serif;
     color: #5aa3af;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     margin-top: 4px;
     margin-bottom: 8px;
 
     img {
+      margin: 0 2px;
       display: inline-block;
       vertical-align: middle;
     }
@@ -44,7 +49,7 @@ export const Contato = styled.td`
   .endereco {
     font-family: "Montserrat", sans-serif;
     color: #aaaaaa;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     margin-top: 4px;
     margin-bottom: 4px;
