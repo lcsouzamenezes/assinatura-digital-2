@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import * as S from "./styles";
+
+//Libs
+import { Button, message } from "antd";
 import html2canvas from "html2canvas";
 import "file-saver";
 
+//Files
 import LogoP from "../../assets/img/logo-p.jpg";
 import LogoG from "../../assets/img/logo-g.jpg";
 import LogoMail from "../../assets/img/icon-mail.jpg";
@@ -9,10 +14,12 @@ import LogoWeb from "../../assets/img/icon-web.jpg";
 import LogoMap from "../../assets/img/icon-map.jpg";
 import LogoPhone from "../../assets/img/icon-phone.jpg";
 
-import * as S from "./styles";
+//Conponents
 import Header from "../../containers/Header";
 
 const Home = () => {
+  const key = "updatable";
+
   const [pessoa, setPessoa] = useState({
     primeiroNome: "",
     segundoNome: "",
@@ -32,16 +39,17 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    html2canvas(document.querySelector("#capture")).then((canvas) => {
-      //Imprimi o resultado na DOM
-      /*document.body.appendChild(canvas);*/
 
-      canvas.toBlob(function (blob) {
-        // Gerando arquivo para download
-
-        window.saveAs(blob, `${pessoa.primeiroNome} ${pessoa.segundoNome}`);
+    message.loading({ content: "Gerando assinatura...", key });
+    setTimeout(() => {
+      message.success({ content: "Sucesso!", key, duration: 3 });
+      html2canvas(document.querySelector("#capture")).then((canvas) => {
+        canvas.toBlob(function (blob) {
+          // Gerando arquivo para download
+          window.saveAs(blob, `${pessoa.primeiroNome} ${pessoa.segundoNome}`);
+        });
       });
-    });
+    }, 2000);
   };
   return (
     <>
