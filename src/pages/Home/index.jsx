@@ -135,9 +135,8 @@ const Home = () => {
                 <td>
                   <table>
                     <S.Pessoa>
-                      <td width="320">
+                      <td className="p-0" width="320">
                         <img
-                          className="mt-2"
                           alt="logo da squads com o nome squads"
                           src={LogoP}
                         />
@@ -148,6 +147,7 @@ const Home = () => {
                       </td>
                       <td>
                         <img
+                          className="mt-2"
                           alt="logo da squads sem o nome squads"
                           src={LogoG}
                         />
