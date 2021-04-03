@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./styles";
 
 //Libs
-import { Button, message } from "antd";
+import { message } from "antd";
 import html2canvas from "html2canvas";
 import "file-saver";
 
