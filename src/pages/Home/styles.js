@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 420px;
+  width: min-content;
+  min-width: 420px;
+  border-radius: 2px;
   padding: 0 0.5rem;
-  border: 2px dashed #404759;
+  background-color: #fff;
 `;
 
 export const Pessoa = styled.tr`
+  position: relative;
+  img {
+    position: relative;
+  }
   .nome {
     font-family: "Montserrat", sans-serif;
     color: #404759;
