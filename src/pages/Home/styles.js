@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: min-content;
   min-width: 420px;
   border-radius: 2px;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0.7rem 0.7rem;
   background-color: #fff;
 `;
 

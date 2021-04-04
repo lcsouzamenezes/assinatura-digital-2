@@ -135,8 +135,9 @@ const Home = () => {
                 <td>
                   <table>
                     <S.Pessoa>
-                      <td className="p-0" width="320">
+                      <td width="320">
                         <img
+                          className="mt-2"
                           alt="logo da squads com o nome squads"
                           src={LogoP}
                         />
@@ -147,7 +148,6 @@ const Home = () => {
                       </td>
                       <td>
                         <img
-                          className="mt-2"
                           alt="logo da squads sem o nome squads"
                           src={LogoG}
                         />
@@ -161,8 +161,6 @@ const Home = () => {
                   <p className="email text-lowercase">
                     <img alt="logo com símbulo de e-mail" src={LogoMail} />
                     {pessoa.email}
-                    <img alt="logo com símbulo de web" src={LogoWeb} />
-                    <span>www.squads.tec.br</span>
                   </p>
 
                   <p className="endereco">
@@ -177,7 +175,9 @@ const Home = () => {
                   <p className="contato">
                     <img alt="logo com símbulo de telefone" src={LogoPhone} />{" "}
                     +55
-                    <span> (17) 3353-0833</span> | <span> (11) 3434-6484</span>
+                    <span> (17) 3353-0833</span> | <span> (11) 3434-6484 </span>
+                    <img alt="logo com símbulo de web" src={LogoWeb} />
+                    <span> www.squads.tec.br</span>
                   </p>
                 </S.Contato>
               </tr>
