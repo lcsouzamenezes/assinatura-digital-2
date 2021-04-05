@@ -1,12 +1,11 @@
 import React from "react";
-
-// import { Container } from './styles';
+import { Container } from "./styles";
 
 import LogoSquads from "../../assets/img/logo-p.jpg";
 
 function Header() {
   return (
-    <>
+    <Container>
       <nav className="navbar navbar-light bg-light mb-5 bg-white">
         <div className="container-fluid">
           <a className="navbar-brand" href="#teste">
@@ -18,7 +17,7 @@ function Header() {
           </a>
         </div>
       </nav>
-    </>
+    </Container>
   );
 }
 

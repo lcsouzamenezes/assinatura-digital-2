@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
+export const Efeito = styled.div`
+  width: min-content;
+  min-width: 420px;
+  border-radius: 2px;
+  box-shadow: 10px 10px 5px #404759;
+`;
+
 export const Container = styled.div`
   width: min-content;
   min-width: 420px;
   border-radius: 2px;
+  border: 1px solid #404759;
   padding: 0 0.5rem 0.7rem 0.7rem;
   background-color: #fff;
 `;
@@ -39,10 +47,9 @@ export const Contato = styled.td`
     font-size: 14px;
     font-weight: 400;
     margin-top: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
     img {
-      margin: 0 2px;
       display: inline-block;
       vertical-align: middle;
     }
@@ -68,7 +75,7 @@ export const Contato = styled.td`
 
   .contato {
     font-family: "Montserrat", sans-serif;
-    color: #5aa3af;
+    color: #aaaaaa;
     font-size: 13px;
     font-weight: 400;
     margin-top: 4px;
