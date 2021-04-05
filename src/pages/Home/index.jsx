@@ -90,7 +90,7 @@ const Home = () => {
             <Selected
               name="cargo"
               id="cargo"
-              label="Selecione uma opção..."
+              label="Área de atuação"
               onChange={onChangeForm}
               value={pessoa.cargo}
               currencies={profissoes}
