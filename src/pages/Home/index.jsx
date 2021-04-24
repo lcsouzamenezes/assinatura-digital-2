@@ -126,7 +126,9 @@ const Home = () => {
                           <p className="nome">
                             {pessoa.primeiroNome} {pessoa.segundoNome}
                           </p>
-                          <p className="profissao"># {pessoa.cargo}</p>
+                          <p className="profissao text-capitalize">
+                            # {pessoa.cargo}
+                          </p>
                         </td>
                         <td>
                           <img
@@ -141,13 +143,15 @@ const Home = () => {
                 <tr>
                   <S.Contato>
                     <p className="email text-lowercase">
-                      <img alt="logo com símbulo de e-mail" src={LogoMail} />
+                      <img alt="logo com símbulo de e-mail" src={LogoMail} />{" "}
                       {pessoa.email}
+                      <img alt="logo com símbulo de web" src={LogoWeb} />
+                      <span> www.squads.tec.br</span>
                     </p>
 
                     <p className="endereco">
                       <img alt="logo com símbulo de mapa" src={LogoMap} /> Av.
-                      Dr Aniloel Nazareth, 5650, São José do Rio Preto
+                      Dr Aniloel Nazareth, 5650, São José do Rio Preto - SP
                     </p>
                     <p className="endereco">
                       <img alt="logo com símbulo de mapa" src={LogoMap} /> Av.
@@ -159,8 +163,6 @@ const Home = () => {
                       +55
                       <span> (17) 3353-0833</span> |{" "}
                       <span> (11) 3434-6484 </span>
-                      <img alt="logo com símbulo de web" src={LogoWeb} />
-                      <span> www.squads.tec.br</span>
                     </p>
                   </S.Contato>
                 </tr>

@@ -2,22 +2,23 @@ import styled from "styled-components";
 
 export const Efeito = styled.div`
   width: min-content;
-  min-width: 420px;
+  min-width: 450px;
   border-radius: 2px;
-  box-shadow: 10px 10px 5px #404759;
+  /*box-shadow: 10px 10px 5px #404759;*/
 `;
 
 export const Container = styled.div`
   width: min-content;
-  min-width: 420px;
+  min-width: 450px;
   border-radius: 2px;
-  border: 1px solid #404759;
+  border: 1px dashed #404759;
   padding: 0 0.5rem 0.7rem 0.7rem;
   background-color: #fff;
 `;
 
 export const Pessoa = styled.tr`
   position: relative;
+  width: 420px;
   img {
     position: relative;
   }
@@ -35,6 +36,7 @@ export const Pessoa = styled.tr`
     font-family: "Montserrat", sans-serif;
     color: #5aa3af;
     font-size: 13px;
+    text-transform: capitalize;
     font-weight: 600;
     margin-top: 4px;
   }
@@ -75,7 +77,7 @@ export const Contato = styled.td`
 
   .contato {
     font-family: "Montserrat", sans-serif;
-    color: #aaaaaa;
+    color: #5aa3af;
     font-size: 13px;
     font-weight: 400;
     margin-top: 4px;
@@ -87,7 +89,7 @@ export const Contato = styled.td`
     }
 
     span {
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 `;
